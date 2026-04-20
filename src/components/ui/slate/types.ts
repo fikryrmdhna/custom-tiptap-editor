@@ -1,4 +1,3 @@
-import type { Editor } from 'slate';
 import type { ReactEditor } from 'slate-react';
 
 // ─── TYPES ────────────────────────────────────────────────────────────────────
@@ -26,7 +25,7 @@ export type CustomText = {
 
 declare module 'slate' {
   interface CustomTypes {
-    Editor: Editor & ReactEditor;
+    Editor: ReactEditor;
     Element: CustomElement;
     Text: CustomText;
   }

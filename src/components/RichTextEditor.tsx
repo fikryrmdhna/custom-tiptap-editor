@@ -20,7 +20,7 @@ import { Video, ThreeBlackDots, TempoGreyBox, TempoDropCap, TempoRedDot } from '
 import { 
   Bold, Italic, Underline as UnderlineIcon, Strikethrough, 
   Superscript as SuperscriptIcon, Subscript as SubscriptIcon, 
-  List, ListOrdered, Quote, Paperclip, Video as VideoIcon, 
+  List, ListOrdered, Quote, Video as VideoIcon, 
   Database, Type, Circle, MoreHorizontal, LayoutTemplate, Table as TableIcon
 } from 'lucide-react';
 

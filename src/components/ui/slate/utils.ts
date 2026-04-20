@@ -38,7 +38,7 @@ export const toggleBlock = (editor: Editor, format: string) => {
   if (format === 'grey-box') {
     if (isActive) {
       Transforms.unwrapNodes(editor, {
-        match: n => !Editor.isEditor(n) && SlateElement.isElement(n) && n.type === 'grey-box',
+        match: n => !Editor.isEditor(n) && SlateElement.isElement(n) && (n as any).type === 'grey-box',
         split: true,
       });
     } else {
@@ -48,7 +48,7 @@ export const toggleBlock = (editor: Editor, format: string) => {
   }
 
   Transforms.unwrapNodes(editor, {
-    match: n => !Editor.isEditor(n) && SlateElement.isElement(n) && LIST_TYPES.includes(n.type),
+    match: n => !Editor.isEditor(n) && SlateElement.isElement(n) && LIST_TYPES.includes((n as any).type),
     split: true,
   });
   const newType = isActive ? 'paragraph' : isList ? 'list-item' : format;
