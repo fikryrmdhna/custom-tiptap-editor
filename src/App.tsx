@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { SlateTextEditor } from './components/ui/SlateTextEditor'
+import { RichTextEditor } from './components/RichTextEditor'
 
 function App() {
   const [content, setContent] = useState('<p>Coba editor baru dengan <strong>Slate</strong>!</p>')
@@ -12,7 +12,7 @@ function App() {
           <p className="mt-2 text-gray-600 dark:text-gray-400">Standalone Slate Environment</p>
         </div>
 
-        <SlateTextEditor
+        <RichTextEditor
           value={content}
           onChange={setContent}
         />
